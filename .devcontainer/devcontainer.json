@@ -1,0 +1,35 @@
+{
+  "name": "Django Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "14"
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y postgresql-client",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python", // Core Python support (linting, IntelliSense, debugging)
+        "ms-python.vscode-pylance", // Fast, feature-rich language server for Python
+        "ms-toolsai.jupyter", // Jupyter notebook support
+        "batisteo.vscode-django", // Django template support
+        "kevinrose.vsc-python-indent", // Fixes Python indentation
+        "njpwerner.autodocstring", // Auto-generate docstrings
+        "littlefoxteam.vscode-python-test-adapter", // Better test integration
+        "ms-azuretools.vscode-docker", // Docker integration (useful for Django in containers)
+        "humao.rest-client", // Test Django REST APIs with `.http` files
+        "mhutchie.git-graph", // Visual Git graph (helpful for project tracking)
+        "eamodio.gitlens", // Powerful Git history and blame tools
+        "streetsidesoftware.code-spell-checker", // Catch typos in code/comments
+        "esbenp.prettier-vscode", // Optional: if you're mixing with JS or using Black
+        "mtxr.sqltools",                     // SQL management GUI inside VSCode
+        "microsoft.vscode-database"
+      ]
+    }
+  }
+}
+
